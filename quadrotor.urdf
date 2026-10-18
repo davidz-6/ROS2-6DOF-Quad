@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<robot name="quadrotor">
+
+  <!-- =============================== -->
+  <!-- CENTRAL BODY                    -->
+  <!-- =============================== -->
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <!-- X Y Z dimensions in meters -->
+        <box size="0.20 0.20 0.06"/>
+      </geometry>
+
+      <material name="body_color">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+
+  <!-- =============================== -->
+  <!-- FRONT LEFT ARM                  -->
+  <!-- =============================== -->
+
+  <link name="front_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.30 0.03 0.03"/>
+      </geometry>
+
+      <material name="arm_color">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="front_left_arm_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_left_arm"/>
+
+    <origin
+      xyz="0.14 0.14 0"
+      rpy="0 0 0.785"/>
+  </joint>
+
+
+  <!-- =============================== -->
+  <!-- FRONT RIGHT ARM                 -->
+  <!-- =============================== -->
+
+  <link name="front_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.30 0.03 0.03"/>
+      </geometry>
+
+      <material name="arm_color"/>
+    </visual>
+  </link>
+
+  <joint name="front_right_arm_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_right_arm"/>
+
+    <origin
+      xyz="0.14 -0.14 0"
+      rpy="0 0 -0.785"/>
+  </joint>
+
+
+  <!-- =============================== -->
+  <!-- REAR LEFT ARM                   -->
+  <!-- =============================== -->
+
+  <link name="rear_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.30 0.03 0.03"/>
+      </geometry>
+
+      <material name="arm_color"/>
+    </visual>
+  </link>
+
+  <joint name="rear_left_arm_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_left_arm"/>
+
+    <origin
+      xyz="-0.14 0.14 0"
+      rpy="0 0 -0.785"/>
+  </joint>
+
+
+  <!-- =============================== -->
+  <!-- REAR RIGHT ARM                  -->
+  <!-- =============================== -->
+
+  <link name="rear_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.30 0.03 0.03"/>
+      </geometry>
+
+      <material name="arm_color"/>
+    </visual>
+  </link>
+
+  <joint name="rear_right_arm_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_right_arm"/>
+
+    <origin
+      xyz="-0.14 -0.14 0"
+      rpy="0 0 0.785"/>
+  </joint>
+
+</robot>
