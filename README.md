@@ -16,7 +16,7 @@ A simple Python simulation of quadcopter motion using Newton-Euler equations and
 - Matplotlib
 - `quadrotor_dynamics` package (local dynamics functions)
 
-##Running
+## Running
 Can run simple sim using sim.py, or create visualization file and testing using RViz and Gazebo
 
 ## Reference
